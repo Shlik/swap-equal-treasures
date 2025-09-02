@@ -16,7 +16,7 @@ const FeaturedSwaps = () => {
         owner: "Mike R.",
         location: "Midtown"
       },
-      value: "$899",
+      value: "₦899,000",
       status: "Active",
       timeLeft: "2d 14h"
     },
@@ -34,7 +34,7 @@ const FeaturedSwaps = () => {
         owner: "Emma L.",
         location: "Downtown"
       },
-      value: "$349",
+      value: "₦349,000",
       status: "Pending",
       timeLeft: "5d 8h"
     },
@@ -52,7 +52,7 @@ const FeaturedSwaps = () => {
         owner: "Luna S.",
         location: "Arts District"
       },
-      value: "$275",
+      value: "₦275,000",
       status: "Negotiating",
       timeLeft: "1d 3h"
     }
