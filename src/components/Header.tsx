@@ -1,5 +1,6 @@
 import { Search, Plus, User, Menu } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,26 +10,26 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2">
             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-primary-glow flex items-center justify-center">
               <span className="text-white font-bold text-lg">S</span>
             </div>
             <span className="text-2xl font-bold text-primary">SwapSpace</span>
-          </div>
+          </Link>
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#" className="text-foreground hover:text-primary transition-colors font-medium">
+            <Link to="/" className="text-foreground hover:text-primary transition-colors font-medium">
               Browse Items
-            </a>
-            <a href="#" className="text-foreground hover:text-primary transition-colors font-medium">
+            </Link>
+            <Link to="/about" className="text-foreground hover:text-primary transition-colors font-medium">
+              About
+            </Link>
+            <a href="#how-it-works" className="text-foreground hover:text-primary transition-colors font-medium">
               How It Works
             </a>
-            <a href="#" className="text-foreground hover:text-primary transition-colors font-medium">
+            <a href="#community" className="text-foreground hover:text-primary transition-colors font-medium">
               Community
-            </a>
-            <a href="#" className="text-foreground hover:text-primary transition-colors font-medium">
-              Support
             </a>
           </nav>
           
@@ -82,17 +83,17 @@ const Header = () => {
               
               {/* Mobile Navigation */}
               <nav className="flex flex-col space-y-2">
-                <a href="#" className="px-4 py-2 text-foreground hover:text-primary hover:bg-muted rounded-lg transition-colors">
+                <Link to="/" className="px-4 py-2 text-foreground hover:text-primary hover:bg-muted rounded-lg transition-colors">
                   Browse Items
-                </a>
-                <a href="#" className="px-4 py-2 text-foreground hover:text-primary hover:bg-muted rounded-lg transition-colors">
+                </Link>
+                <Link to="/about" className="px-4 py-2 text-foreground hover:text-primary hover:bg-muted rounded-lg transition-colors">
+                  About
+                </Link>
+                <a href="#how-it-works" className="px-4 py-2 text-foreground hover:text-primary hover:bg-muted rounded-lg transition-colors">
                   How It Works
                 </a>
-                <a href="#" className="px-4 py-2 text-foreground hover:text-primary hover:bg-muted rounded-lg transition-colors">
+                <a href="#community" className="px-4 py-2 text-foreground hover:text-primary hover:bg-muted rounded-lg transition-colors">
                   Community
-                </a>
-                <a href="#" className="px-4 py-2 text-foreground hover:text-primary hover:bg-muted rounded-lg transition-colors">
-                  Support
                 </a>
               </nav>
               
