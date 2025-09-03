@@ -1,7 +1,18 @@
 import { ArrowRight, Users, Recycle, Star } from "lucide-react";
+import { Link } from "react-router-dom";
+import { useToast } from "@/hooks/use-toast";
 import heroImage from "@/assets/hero-swap.jpg";
 
 const Hero = () => {
+  const { toast } = useToast();
+
+  const handleStartSwapping = () => {
+    toast({
+      title: "Welcome to SwapSpace!",
+      description: "Ready to find amazing items to swap? Let's get started!",
+    });
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
@@ -38,13 +49,13 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 mb-16">
-            <button className="btn-hero group">
+            <Link to="/browse" className="btn-hero group" onClick={handleStartSwapping}>
               Start Swapping
               <ArrowRight className="w-6 h-6 ml-2 group-hover:translate-x-1 transition-transform" />
-            </button>
-            <button className="btn-accent">
+            </Link>
+            <Link to="/how-it-works" className="btn-accent">
               How It Works
-            </button>
+            </Link>
           </div>
           
           {/* Stats */}
