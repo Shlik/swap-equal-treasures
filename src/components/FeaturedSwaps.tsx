@@ -1,4 +1,5 @@
 import { Clock, MapPin, ArrowLeftRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const FeaturedSwaps = () => {
   const swaps = [
@@ -134,18 +135,21 @@ const FeaturedSwaps = () => {
                   <span className="text-lg font-bold text-primary">{swap.value}</span>
                   <span className="text-sm text-muted-foreground ml-1">each</span>
                 </div>
-                <button className="px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors text-sm font-medium">
+                <Link 
+                  to={`/swap/${swap.id}`}
+                  className="px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors text-sm font-medium"
+                >
                   View Details
-                </button>
+                </Link>
               </div>
             </div>
           ))}
         </div>
         
         <div className="text-center mt-12">
-          <button className="btn-accent">
+          <Link to="/swaps" className="btn-accent">
             View All Swaps
-          </button>
+          </Link>
         </div>
       </div>
     </section>

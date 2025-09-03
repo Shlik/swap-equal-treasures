@@ -8,6 +8,7 @@ import About from "./pages/About";
 import HowItWorksPage from "./pages/HowItWorks";
 import Community from "./pages/Community";
 import BrowseItems from "./pages/BrowseItems";
+import AllSwaps from "./pages/AllSwaps";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/how-it-works" element={<HowItWorksPage />} />
           <Route path="/community" element={<Community />} />
+          <Route path="/swaps" element={<AllSwaps />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
