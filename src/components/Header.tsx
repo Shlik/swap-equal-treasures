@@ -19,7 +19,7 @@ const Header = () => {
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-foreground hover:text-primary transition-colors font-medium">
+            <Link to="/browse" className="text-foreground hover:text-primary transition-colors font-medium">
               Browse Items
             </Link>
             <Link to="/about" className="text-foreground hover:text-primary transition-colors font-medium">
@@ -83,7 +83,7 @@ const Header = () => {
               
               {/* Mobile Navigation */}
               <nav className="flex flex-col space-y-2">
-                <Link to="/" className="px-4 py-2 text-foreground hover:text-primary hover:bg-muted rounded-lg transition-colors">
+                <Link to="/browse" className="px-4 py-2 text-foreground hover:text-primary hover:bg-muted rounded-lg transition-colors">
                   Browse Items
                 </Link>
                 <Link to="/about" className="px-4 py-2 text-foreground hover:text-primary hover:bg-muted rounded-lg transition-colors">

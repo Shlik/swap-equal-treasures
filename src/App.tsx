@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import About from "./pages/About";
 import HowItWorksPage from "./pages/HowItWorks";
 import Community from "./pages/Community";
+import BrowseItems from "./pages/BrowseItems";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -19,6 +20,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/browse" element={<BrowseItems />} />
           <Route path="/about" element={<About />} />
           <Route path="/how-it-works" element={<HowItWorksPage />} />
           <Route path="/community" element={<Community />} />
